@@ -17,6 +17,20 @@
 
 <%= render "form", book: @book %>
 
+<%= form_with(model: @book, local: true) do |form| %>
+
+  <%= form.label :author %>
+  <%= form.text_field :author %>
+
+  <%= form.label :price %>
+  <%= form.number_field :price %>
+
+  <%= form.label :published_date %>
+  <%= form.date_select :published_date %>
+
+  <%= form.submit %>
+<% end %>
+
 <br>
 
 <div>
