@@ -1,0 +1,34 @@
+
+---
+ar_internal_metadata:
+  columns:
+  - key
+  - value
+  - created_at
+  - updated_at
+  records: 
+  - - environment
+    - development
+    - 2024-01-19 15:06:26.561009000 Z
+    - 2024-01-19 15:06:26.561009000 Z
+
+---
+books:
+  columns:
+  - id
+  - title
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - Abdulhameed is Excited for Spring 2024!
+    - 2024-01-19 15:09:07.693851000 Z
+    - 2024-01-19 15:25:45.527590000 Z
+  - - 2
+    - Hello World
+    - 2024-01-19 15:26:54.593032000 Z
+    - 2024-01-19 15:26:54.593032000 Z
+  - - 3
+    - Hi!!
+    - 2024-01-19 15:27:02.942172000 Z
+    - 2024-01-19 15:27:02.942172000 Z
