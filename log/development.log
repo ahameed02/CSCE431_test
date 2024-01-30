@@ -2043,3 +2043,48 @@ Processing by BooksController#index as HTML
 Completed 200 OK in 41ms (Views: 35.4ms | ActiveRecord: 1.6ms | Allocations: 6598)
 
 
+Started GET "/" for 192.168.65.1 at 2024-01-30 03:50:18 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (1.8ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:14
+  Rendered books/_book.html.erb (Duration: 0.9ms | Allocations: 230)
+  Rendered books/_book.html.erb (Duration: 0.0ms | Allocations: 17)
+  Rendered books/_book.html.erb (Duration: 0.0ms | Allocations: 16)
+  Rendered books/index.html.erb within layouts/application (Duration: 33.6ms | Allocations: 6933)
+  Rendered layout layouts/application.html.erb (Duration: 175.4ms | Allocations: 39848)
+Completed 200 OK in 212ms (Views: 178.2ms | ActiveRecord: 12.3ms | Allocations: 44866)
+
+
+Started GET "/books/5" for 192.168.65.1 at 2024-01-30 03:50:22 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mBook Load (1.5ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:63:in `set_book'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/_book.html.erb (Duration: 0.1ms | Allocations: 23)
+  Rendered books/show.html.erb within layouts/application (Duration: 2.3ms | Allocations: 948)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 2381)
+Completed 200 OK in 21ms (Views: 7.7ms | ActiveRecord: 2.1ms | Allocations: 5258)
+
+
+Started GET "/books" for 192.168.65.1 at 2024-01-30 03:50:27 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:14
+  Rendered books/_book.html.erb (Duration: 0.1ms | Allocations: 17)
+  Rendered books/_book.html.erb (Duration: 0.0ms | Allocations: 17)
+  Rendered books/_book.html.erb (Duration: 0.0ms | Allocations: 16)
+  Rendered books/index.html.erb within layouts/application (Duration: 4.7ms | Allocations: 1472)
+  Rendered layout layouts/application.html.erb (Duration: 9.4ms | Allocations: 2805)
+Completed 200 OK in 12ms (Views: 10.3ms | ActiveRecord: 0.4ms | Allocations: 3090)
+
+
